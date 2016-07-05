@@ -29,8 +29,8 @@ download.onclick = ->
     alertify.error 'No output defined!'
   else
     alertify.prompt('Save file name', '', ((evt, value) ->
-      blob = new Blob([ output.value ], type: 'text/css')
-      saveAs blob, value + '.css'
+      blob = new Blob([ output.value ], type: 'text/javascript')
+      saveAs blob, value + '.js'
     ), ->
       # User clicked cancel
       alertify.error 'Download operation aborted.'

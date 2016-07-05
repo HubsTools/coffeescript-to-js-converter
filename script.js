@@ -41,9 +41,9 @@ download.onclick = function() {
     return alertify.prompt('Save file name', '', (function(evt, value) {
       var blob;
       blob = new Blob([output.value], {
-        type: 'text/css'
+        type: 'text/javascript'
       });
-      return saveAs(blob, value + '.css');
+      return saveAs(blob, value + '.js');
     }), function() {
       return alertify.error('Download operation aborted.');
     }).set('basic', true);
